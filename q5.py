@@ -6,7 +6,7 @@ def hash1(x):
     sublist=[[] for i in range(10)]
     for j in x:
         r= j%10
-        sublist[r].append(r)
+        sublist[r].append(j)
     return sublist
 print(hash1(a))
     
