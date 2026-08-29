@@ -8,7 +8,9 @@ def hash1(x):
         r= j%10
         sublist[r].append(j)
     return sublist
-print(hash1(a))
+table = hash1(a)
+for i in range(10):
+    print(f"Sublist {i}: {table[i]}")
     
   
     
