@@ -1,13 +1,12 @@
-from collections import Counter
 
-n = int(input("Enter n: "))
-
-letter_count = Counter()
-
+n = int(input("Enter the number of strings: "))
+string_list = []
+print(f"Enter {n} strings:")
 for _ in range(n):
-    text = input("Enter a string: ")
-    letter_count.update(text.lower())
-
-for letter, count in sorted(letter_count.items()):
-    if letter.isalpha():
-        print(letter,":", count)
+    string_list.append(input())
+char_counts = {}
+for string in string_list:
+    for char in string.lower():
+        if char.isalpha():
+            char_counts[char] = char_counts.get(char, 0) + 1
+print("Alphabet counts:", char_counts)
