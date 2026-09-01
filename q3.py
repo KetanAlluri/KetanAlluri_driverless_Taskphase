@@ -13,9 +13,9 @@ class search:
         low,high=0,len(x)-1
         while low<=high:
             mid=(low+high)//2
-            if x[mid]==target:
+            if x[mid].lower()==target.lower():
                 return mid
-            elif x[mid]<target:
+            elif x[mid].lower()<target.lower():
                 low=mid+1
             else:
                 high=mid-1
