@@ -10,11 +10,15 @@ class search:
         return Q1      
 
     def search(self, x, target):
-        a=len(x)
-        for i in range(a):
-            if x[i] == target:
-                return i
-                break
+        low,high=0,len(x)-1
+        while low<=high:
+            mid=(low+high)//2
+            if x[mid]==target:
+                return mid
+            elif x[mid]<target:
+                low=mid+1
+            else:
+                high=mid-1
         return -1
 Q1=["Q1", "Delta", "Alpha", "Omega", "Beta"]
 t=input("Enter the target to search: ")
