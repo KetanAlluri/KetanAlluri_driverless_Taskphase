@@ -2,6 +2,7 @@ n=int(input("enter n"))
 a=[]
 for _ in range(n):
     a.append(int(input("enter a integer: ")))
+a=list(set(a))
 def search(array,o):
     low,high=0,(len(array))
     while low<high:
