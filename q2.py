@@ -1,5 +1,5 @@
 class sort:
-    def sort1(self, array):
+    def sort1(q, array):
         n = len(array)
         for i in range(n - 1):
             min = i
