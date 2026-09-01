@@ -3,6 +3,8 @@ n=int(input("enter n"))
 a=[]
 for _ in range(n):
     a.append(int(input("enter a integer: ")))
+a=list(set(a))
+a=list(set(a))
 def hash1(x):
     sublist=[[] for i in range(10)]
     for j in x:
